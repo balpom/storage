@@ -1,0 +1,22 @@
+{
+    "name": "balpom/storage",
+    "description": "Abstract storage for abstract data.",
+    "type": "library",
+    "homepage": "https://www.balpom.ru",
+    "license": "MIT",
+    "keywords": ["data", "storage", "abstract", "local", "file", "memory", "array", "database", "key", "value", "keyvalue", "key-value", "key value"],
+    "autoload": {
+        "psr-4": {
+            "Balpom\\Storage\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mikhail (Balpom)"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "balpom/files": ">=2.2.0"
+    }
+}
