@@ -17,6 +17,16 @@ class KeyValueStorage extends AbstractStorage implements KeyValueStorageInterfac
     }
 
     /*
+     * Return all keys from storage as ["key1", "key2", "key3", ...].
+     *
+     * If $keyValue = TRUE - return as ["key1"=>"value1", "key2"=>"value2", ...].
+     */
+    public function all(bool $keyValue = false): array|false
+    {
+        return $this->driver->all($keyValue);
+    }
+
+    /*
      * Return value by key.
      */
     public function value(string $key): string|false
@@ -51,6 +61,14 @@ class KeyValueStorage extends AbstractStorage implements KeyValueStorageInterfac
     {
         $this->checkKey('exist', $key);
         return $this->driver->delete($key);
+    }
+
+    /*
+     * Wipes clean the entire records.
+     */
+    public function clear(): bool
+    {
+        return $this->driver->clear();
     }
 
     protected function checkKey(string $method, string $key): void
