@@ -17,6 +17,6 @@
     ],
     "require": {
         "php": ">=8.2",
-        "balpom/files": ">=2.2.0"
+        "balpom/files": ">=2.3.0"
     }
 }
