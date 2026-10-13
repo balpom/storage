@@ -7,6 +7,11 @@ namespace Balpom\Storage;
 interface AbstractStorageInterface
 {
     /*
+     * Wipes clean the entire records.
+     */
+    public function clear(): bool;
+
+    /*
      * Check key.
      */
     public function isValidKey(string $key): bool;
