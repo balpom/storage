@@ -12,5 +12,8 @@ include dirname(__DIR__) . '/vendor/autoload.php';
 
 $naming = new DefaultNaming(__DIR__);
 
-echo $naming->path('test_field');
-echo PHP_EOL;
+$path = $naming->pathByKey('test_field');
+echo $path . PHP_EOL;
+
+$key = $naming->keyByPath($path);
+echo $key . PHP_EOL;
