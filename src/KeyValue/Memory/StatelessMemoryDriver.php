@@ -8,6 +8,20 @@ class StatelessMemoryDriver extends AbstractMemoryDriver
 {
     private array $values = [];
 
+    public function all(bool $keyValue = false): array|false
+    {
+        $result = [];
+        foreach ($this->values as $key => $value) {
+            if ($keyValue) {
+                $result[$key] = $value['value'];
+            } else {
+                $result[] = $key;
+            }
+        }
+
+        return $result;
+    }
+
     public function value(string $key): string|false
     {
         return $this->exists($key) ? $this->values[$key]['value'] : false;
@@ -43,6 +57,12 @@ class StatelessMemoryDriver extends AbstractMemoryDriver
         }
         $this->values[$key]['time'] = $time;
 
+        return true;
+    }
+
+    public function clear(): bool
+    {
+        $this->values = [];
         return true;
     }
 
