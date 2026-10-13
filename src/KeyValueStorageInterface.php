@@ -7,6 +7,13 @@ namespace Balpom\Storage;
 interface KeyValueStorageInterface extends AbstractStorageInterface
 {
     /*
+     * Return all keys from storage as ["key1", "key2", "key3", ...].
+     *
+     * If $keyValue = TRUE - return as ["key1"=>"value1", "key2"=>"value2", ...].
+     */
+    public function all(bool $keyValue = false): array|false;
+
+    /*
      * Return value by key.
      */
     public function value(string $key): string|false;
