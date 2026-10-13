@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Balpom\Storage\KeyValue;
+namespace Balpom\Storage;
 
-class StorageInvalidArgumentException extends StoragetException
+class StorageInvalidArgumentException extends StorageException
 {
 
 }
