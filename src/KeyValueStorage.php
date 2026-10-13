@@ -13,7 +13,7 @@ class KeyValueStorage extends AbstractStorage implements KeyValueStorageInterfac
 
     public function isValidValue(mixed $value): bool
     {
-        return $this->driver->isValidValue($key);
+        return $this->driver->isValidValue($value);
     }
 
     /*
