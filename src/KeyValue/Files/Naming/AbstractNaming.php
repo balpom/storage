@@ -6,7 +6,7 @@ namespace Balpom\Storage\KeyValue\Files\Naming;
 
 use Balpom\Storage\KeyValue\StorageException;
 
-abstract class AbstractNaming implements NamingStrategyInterface
+abstract class AbstractNaming implements NamingInterface
 {
     protected string $rootDirectory;
 

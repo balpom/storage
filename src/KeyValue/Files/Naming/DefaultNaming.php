@@ -6,9 +6,15 @@ namespace Balpom\Storage\KeyValue\Files\Naming;
 
 class DefaultNaming extends AbstractNaming
 {
-    public function path(string $key): string
+    public function pathByKey(string $key): string
     {
         return $this->rootDirectory . $key;
+    }
+
+    public function keyByPath(string $path): string
+    {
+        $rootDirLen = strlen($this->rootDirectory);
+        return substr($path, $rootDirLen);
     }
 
     protected function sanitizeDirectory(string $dir): string
