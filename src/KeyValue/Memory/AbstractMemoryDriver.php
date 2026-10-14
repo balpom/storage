@@ -8,10 +8,12 @@ use Balpom\Storage\AbstractDriver;
 
 abstract class AbstractMemoryDriver extends AbstractDriver
 {
-    public function isValidValue(mixed $value): bool
-    {
-        $validTypes = ['string', 'int', 'float', 'bool', 'null', 'array', 'object'];
-        return in_array(gettype($value), $validTypes);
-    }
+    /*
+      public function isValidValue(mixed $value): bool
+      {
+      $validTypes = ['string', 'int', 'float', 'bool', 'null', 'array', 'object'];
+      return in_array(gettype($value), $validTypes);
+      }
+     */
 
 }
