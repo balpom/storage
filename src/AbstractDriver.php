@@ -20,4 +20,10 @@ abstract class AbstractDriver implements DriverInterface
         return true;
     }
 
+    public function isValidValue(mixed $value): bool
+    {
+        $validTypes = ['string', 'int', 'float'];
+        return in_array(gettype($value), $validTypes);
+    }
+
 }
