@@ -19,10 +19,4 @@ abstract class AbstractFilesDriver extends AbstractDriver
         $this->naming = $naming ?: new DefaultNaming($rootDirectory);
     }
 
-    public function isValidValue(mixed $value): bool
-    {
-        $validTypes = ['string', 'int', 'float'];
-        return in_array(gettype($value), $validTypes);
-    }
-
 }
